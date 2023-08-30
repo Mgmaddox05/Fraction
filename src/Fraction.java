@@ -29,12 +29,21 @@ public class Fraction {
         int newNum2 = other.numerator * multiply2;
         int numerator = newNum1 + newNum2;
         
-        Fraction fracSum = new Fraction(numerator, denominator);
+        Fraction fracSum = new Fraction(numerator, denominator2);
         
         fracSum.reduce();
         
          
         return fracSum;
+    }
+
+    public Fraction Multiply(Fraction other)
+    {
+        int numerator = this.numerator*other.numerator;
+        int denominator = this.denominator*other.denominator;
+        Fraction fracMul = new Fraction(numerator, denominator);
+        fracMul.reduce();
+        return fracMul;
     }
 
     public String toString()
